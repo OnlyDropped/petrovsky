@@ -2,6 +2,28 @@
 @import "vars";
 @import "reset";
 @import "global";
+.start-page {
+  //background-color: #b6cbd1;
+  height: 100vh;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    //background-color: #43bf57;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  &__link + .start-page__link {
+    margin-top: 20px;
+  }
+  &__link {
+    @extend %MuseoSansCyrl-500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    text-align: center;
+  }
+}
 .header {
   //background: rgba(#000, 0.2);
   &__inner {
@@ -216,12 +238,12 @@
     font-size: 22px;
     line-height: 27px;
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     margin: 40px 0;
   }
-  &__all{
+  &__all {
     display: block;
     @extend %Inter-Regular-400;
     font-size: 16px;
@@ -273,7 +295,8 @@
     display: flex;
   }
   &__discount,
-  &__order {
+  &__order,
+  &__colors {
     display: grid;
     place-items: center;
     width: 40px;
@@ -295,28 +318,23 @@
     color: #fff;
     margin-left: 10px;
   }
-  &__bookmark {
+  &__bookmark,
+  &__colors {
     display: grid;
     place-items: center;
     width: 40px;
     height: 40px;
+  }
+  &__bookmark {
     border: 2px solid #f2f5f9;
     border-radius: 5px;
     background: transparent;
     //background: #ff5f5f;
   }
   &__colors {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
     background: #f2f5f9;
-    border-radius: 5px;
     text-align: center;
-    @extend %MuseoSansCyrl-700;
     font-size: 12px;
-    line-height: 100%;
-    letter-spacing: -0.05em;
     color: #001a34;
   }
   &__img {
@@ -539,9 +557,774 @@
     margin: 49px auto 0px;
   }
 }
+.catalog-product {
+  &__inner {
+    padding: 12px 0 25px;
+  }
+  &__wrapper {
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 50px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 150px;
+    width: 100%;
+    min-height: 209px;
+  }
+  &__content {
+    max-width: 150px;
+    min-height: 150px;
+    display: grid;
+    place-items: center;
+    img {
+      width: 150px;
+      height: 112px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__text {
+    @extend %MuseoSansCyrl-500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #5a5f6e;
+  }
+  &__open {
+    display: block;
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #31465a;
+    padding: 16px 48px;
+    background: #f2f5f9;
+    border-radius: 5px;
+    margin: auto;
+    display: none;
+  }
+}
+.filter {
+  &__inner {
+    padding: 25px 0 78px;
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 1015px;
+    width: 100%;
+    margin-left: 40px;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 74px;
+    padding-bottom: 45px;
+  }
+  .catalog-card__cart:hover {
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background: #474a51;
+    border: 2px solid #474a51;
+    path {
+      fill: #ffa800;
+    }
+  }
+  &__view {
+    display: block;
+    margin: 45px auto 0;
+    border: 1px solid #d5d9e5;
+    border-radius: 5px;
+    padding: 16px 23px;
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #31465a;
+  }
+}
+.filter-pagination {
+  max-width: 100%;
+  width: 100%;
+  padding: 60px 0 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
+  &__item + .filter-pagination__item {
+    margin-left: 20px;
+  }
+  &__item,
+  &__arrow {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background: #f2f5f9;
+    border-radius: 5px;
+  }
+  &__link {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.05em;
+    color: #959cb2;
+  }
+  &__item--active {
+    background: #cf000f;
+    .filter-pagination__link {
+      color: #fff;
+    }
+  }
+  &__arrow {
+    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    &:hover {
+      background: #cf000f;
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+.filter-sidebar {
+  max-width: 325px;
+  width: 100%;
+  //background: rgba(#000, 0.2);
+  &__item {
+    padding-left: 19px;
+    max-width: 100%;
+    width: 100%;
+  }
+  &__item + .filter-sidebar__item {
+    margin-top: 25px;
+  }
+  &__title,
+  &__view,
+  &__discount,
+  &__btn {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+    margin-bottom: 32px;
+  }
+  &__custom-checkbox {
+    // Тут мы просто центрируем чекбокс и текст
+    display: flex;
+    align-items: center;
+    @extend %MuseoSansCyrl-500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #31465a;
+    cursor: pointer;
+    width: fit-content;
+    //background: rgba(#000, 0.3);
+  }
+  &__custom-checkbox + .filter-sidebar__custom-checkbox {
+    margin-top: 12px;
+  }
+  &__custom-checkbox .filter-sidebar__checkbox {
+    margin-right: 12px;
+  }
+  &__custom-checkbox input {
+    -webkit-appearance: none; // Скрываем оригинальный чекбокс
+    position: absolute; // После скрытия оставется пустое пространство,
+    // но абсолютное позиционирование это устранит
+  }
+  &__checkbox {
+    // Тут стилизуем сам чекбокс
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #31465a;
+    border-radius: 3px;
+  }
+  &__checkmark {
+    // Тут центритуем и пишем стили для иконки
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    display: none; // Скрываем иконку
+  }
+  &__custom-checkbox input:checked ~ .filter-sidebar__checkbox .filter-sidebar__checkmark {
+    display: block; // Показываем иконку, когда чекбокс активен
+  }
+  &__custom-checkbox input:checked ~ .filter-sidebar__checkbox {
+    background: blue;
+    border: 2px solid #31465a;
+    background: #31465a;
+    // Если вы хотите не только отображать икнонку, но и менять
+    // сам чекбокс после активации - напишите сюда код для активного состояния
+  }
+  &__color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  &__color-white {
+    background: #fff;
+    border: 1px solid #6e7d8b;
+  }
+  &__color-beige {
+    background: #fff8dc;
+  }
+  &__color-turquoise {
+    background: #00d6ca;
+  }
+  &__color-vinous {
+    background: #960001;
+  }
+  &__color-bronze {
+    background: #95553a;
+  }
+  &__color-beech {
+    background: #f2ab72;
+  }
+  &__view {
+    color: #cf000f;
+    margin-top: 20px;
+  }
+  &__discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  &__discount + .filter-sidebar__discount {
+    margin-top: 22px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+  }
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b3bcc5;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  input:checked + .slider {
+    background: #31465a;
+  }
+  input:focus + .slider {
+    box-shadow: none;
+  }
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  &__btn {
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    margin: 40px auto 0;
+    background: #f2f5f9;
+    border-radius: 5px;
+    display: block;
+    padding: 16px 48px;
+  }
+  .irs--flat {
+    //height: 40px;
+    margin-top: -17px;
+  }
+  .irs--flat .irs-line {
+    top: 25px;
+    height: 4px;
+    background-color: #d5d9e5;
+    border-radius: 4px;
+  }
+  .irs--flat .irs-bar {
+    top: 25px;
+    height: 4px;
+    background-color: #cf000f;
+  }
+  .irs--flat .irs-handle > i {
+    display: none;
+  }
+  .irs--flat .irs-handle {
+    top: 17px;
+    width: 20px;
+    height: 20px;
+    background: #cf000f;
+    border-radius: 50%;
+  }
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  &__price-from,
+  &__price-to {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    border: 2px solid #d5d9e5;
+    border-radius: 5px;
+    padding: 10px 13px 10px 10px;
+    @extend %MuseoSansCyrl-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #d5d9e5;
+  }
+  &__from-price,
+  &__to-price {
+    color: #474a51;
+  }
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+}
+.buy-together {
+  &__inner {
+    padding: 35px 0 150px;
+  }
+  &__title {
+    @extend %MuseoSansCyrl-500;
+    font-size: 36px;
+    line-height: 40px;
+    color: #000;
+    text-align: center;
+  }
+  &__wrapper {
+    max-width: 1361px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  &__card {
+    max-width: 325px;
+    width: 100%;
+  }
+  &__item {
+    max-width: 325px;
+    width: 100%;
+  }
+  .slick-arrow {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #cf000f, #cf000f), #ffffff;
+  }
+  .slick-prev.slick-arrow.slick-arrow {
+    left: -25px;
+  }
+  .slick-next.slick-arrow {
+    right: -20px;
+    margin-left: auto;
+  }
+  .slick-arrow.slick-disabled {
+    opacity: 0.4;
+  }
+}
+.card-product {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0 39px;
+  }
+  &__content {
+    max-width: 800px;
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__content-img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+  }
+  &__wrap {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+  &__wrap-img {
+    width: 390px;
+    height: 390px;
+    object-fit: cover;
+  }
+  &__info {
+    max-width: 550px;
+    width: 100%;
+    margin-left: auto;
+  }
+  &__head,
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+  }
+  &__code {
+    @extend %MuseoSansCyrl-500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #959cb2;
+  }
+  &__bookmark {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #d5d9e5;
+    border-radius: 5px;
+  }
+  &__price {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+    margin: 30px 0 40px;
+  }
+  &__price-num {
+    margin: 0 auto 0 10px;
+    @extend %MuseoSansCyrl-500;
+    font-size: 36px;
+    line-height: 40px;
+    color: #cf000f;
+  }
+  &__add-cart {
+    padding: 16px 60px;
+    background: #cf000f;
+    border-radius: 5px;
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #fff;
+  }
+  &__span {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+  }
+  &__slider {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 40px;
+    .slick-arrow {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f2f5f9;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      z-index: 2;
+    }
+    .slick-prev.slick-arrow {
+      left: -75px;
+    }
+    .slick-next.slick-arrow {
+      right: -75px;
+      margin-left: auto;
+    }
+  }
+  &__item,
+  &__card,
+  &__images {
+    max-width: 85px;
+    width: 100%;
+  }
+  &__img {
+    width: 85px;
+    width: 85px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  &__description {
+    max-width: 455px;
+    width: 100%;
+  }
+  &__items,
+  &__number {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+  }
+  &__items + .card-product__items {
+    margin-top: 20px;
+  }
+  &__text {
+    @extend %MuseoSansCyrl-300;
+    margin-top: 5px;
+    padding-left: 10px;
+  }
+  &__information {
+    margin-bottom: 20px;
+  }
+  &__sizes {
+    display: flex;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  &__width,
+  &__height,
+  &__depth {
+    max-width: 60px;
+    width: 100%;
+    text-align: center;
+    @extend %MuseoSansCyrl-300;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__width,
+  &__height {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      right: -28px;
+      top: 18px;
+      background-image: url("../img/icons/X.svg");
+    }
+  }
+  &__height {
+    margin: 0 48px;
+  }
+  &__number {
+    margin-top: 5px;
+  }
+}
+.order {
+  background: #f2f5f9;
+  &__inner {
+    margin-bottom: 150px;
+  }
+  &__wrapper {
+    text-align: center;
+    padding: 50px 0 90px;
+  }
+  &__form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px 15px 13px;
+    @extend %MuseoSansCyrl-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+    border: none;
+    & + .order__input {
+      margin-top: 10px;
+    }
+  }
+  &__wrap {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    .order__input + .order__input {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+    .order__inpit {
+      width: 50%;
+    }
+  }
+  &__delivery {
+    margin: 30px auto;
+  }
+  &__delivery-type {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+  }
+  .custom-checkbox {
+    // Тут мы просто центрируем чекбокс и текст
+    display: flex;
+    align-items: center;
+    @extend %MuseoSansCyrl-300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+  }
+  .custom-checkbox .checkbox {
+    margin-right: 15px;
+  }
+  .custom-checkbox input {
+    -webkit-appearance: none; // Скрываем оригинальный чекбокс
+    position: absolute; // После скрытия оставется пустое пространство,
+    // но абсолютное позиционирование это устранит
+  }
+  .checkbox {
+    // Тут стилизуем сам чекбокс
+    position: relative;
+    border: 2px solid red;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #31465a;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .round {
+    // Тут центритуем и пишем стили для иконки
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #31465a;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  .custom-checkbox input:checked ~ .checkbox .round {
+    display: block; // Показываем иконку, когда чекбокс активен
+    opacity: 1;
+  }
+  .custom-checkbox input:checked ~ .checkbox {
+    background: #f7ca18;
+    // Если вы хотите не только отображать икнонку, но и менять
+    // сам чекбокс после активации - напишите сюда код для активного состояния
+  }
+  &__comment {
+    .checkbox {
+      // Тут стилизуем сам чекбокс
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 1px solid #31465a;
+      border-radius: 3px;
+    }
+    .checkmark {
+      // Тут центритуем и пишем стили для иконки
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: auto;
+      display: none; // Скрываем иконку
+    }
+    .custom-checkbox input:checked ~ .checkbox .checkmark {
+      display: block; // Показываем иконку, когда чекбокс активен
+    }
+
+    .custom-checkbox input:checked ~ .checkbox {
+      background: #31465a;
+      border: 2px solid #31465a;
+      // Если вы хотите не только отображать икнонку, но и менять
+      // сам чекбокс после активации - напишите сюда код для активного состояния
+    }
+  }
+  &__textarea {
+    min-height: 180px;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    width: 100%;
+    background: #cf000f;
+    border-radius: 5px;
+    padding: 16px 0;
+    margin-top: 40px;
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #fff;
+  }
+}
+.basket{
+  &__inner{
+    padding: 11px 0 237px;
+  }
+  &__title{
+    margin-bottom: 30px;
+  }
+}
 .footer {
-  background: rgba(#000, 0.3);
-  background: #EFEFEF
+  background: #efefef;
 }
 .footer-top {
   display: flex;
