@@ -1,3 +1,5 @@
+$('.basket__number').styler({})
+
 $('.carousel-slider').slick({
   arrows: false,
   centerMode: false,
@@ -61,4 +63,4 @@ $('.filter-sidebar__input').ionRangeSlider({
   },
 })
 
-
+$('.basket__number').styler({})

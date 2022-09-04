@@ -1184,14 +1184,7 @@
   &__input,
   &__textarea {
     width: 100%;
-    background: #fff;
-    border-radius: 5px;
     padding: 15px 15px 13px;
-    @extend %MuseoSansCyrl-500;
-    font-size: 18px;
-    line-height: 22px;
-    color: #31465a;
-    border: none;
     & + .order__input {
       margin-top: 10px;
     }
@@ -1304,23 +1297,308 @@
   }
   &__btn {
     width: 100%;
-    background: #cf000f;
-    border-radius: 5px;
-    padding: 16px 0;
     margin-top: 40px;
+    @extend %btn-second;
+  }
+}
+.basket {
+  &__inner {
+    padding: 11px 0 237px;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 19px;
+  }
+  &__content {
+    max-width: 1081px;
+    width: 100%;
+  }
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #f2f5f9;
+    border-radius: 5px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    @extend %MuseoSansCyrl-500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #31465a;
+  }
+  &__select {
+    margin: 0 30px;
+  }
+  &__forms {
+    margin-right: 30px;
+    .custom-checkbox {
+      // Тут мы просто центрируем чекбокс и текст
+      display: flex;
+      align-items: center;
+      @extend %MuseoSansCyrl-500;
+      font-size: 16px;
+      line-height: 18px;
+      color: #31465a;
+    }
+    .custom-checkbox .checkbox {
+      margin-right: 30px;
+    }
+    .custom-checkbox input {
+      -webkit-appearance: none; // Скрываем оригинальный чекбокс
+      position: absolute; // После скрытия оставется пустое пространство,
+      // но абсолютное позиционирование это устранит
+    }
+    .checkbox {
+      // Тут стилизуем сам чекбокс
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 1px solid #31465a;
+      border-radius: 3px;
+    }
+    .checkmark {
+      // Тут центритуем и пишем стили для иконки
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: auto;
+      display: none; // Скрываем иконку
+    }
+    .custom-checkbox input:checked ~ .checkbox .checkmark {
+      display: block; // Показываем иконку, когда чекбокс активен
+    }
+    .custom-checkbox input:checked ~ .checkbox {
+      background: #31465a;
+    }
+  }
+  &__delete {
+    @extend %MuseoSansCyrl-500;
+    line-height: 18px;
+    color: #cf000f;
+  }
+  &__info {
+    max-width: 300px;
+    width: 100%;
+    background: #f2f5f9;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  &__form,
+  &__label {
+    max-width: 100%;
+    width: 100%;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input {
+    width: 100%;
+    padding: 14px 13px;
+  }
+  &__plus {
+    padding: 15px;
+    @extend %btn-second;
+    margin-left: 11px;
+  }
+  &__promo,
+  &__price {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+  }
+  &__cancel {
+    line-height: 22px;
+    color: #959cb2;
+  }
+  &__item {
+    padding: 20px 0 15px;
+    border-top: 1px solid #d5d9e5;
+    border-bottom: 1px solid #d5d9e5;
+  }
+  &__price {
+    line-height: 18px;
+    margin: 0 0 15px 0;
+  }
+  &__items + .basket__items {
+    margin-top: 12px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__total {
+    display: flex;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  &__list {
+    margin-top: 19px;
+  }
+  &__cart,
+  &__total {
+    @extend %MuseoSansCyrl-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #31465a;
+  }
+  &__span,
+  &__items {
+    @extend %MuseoSansCyrl-300;
+    font-size: 14px;
+    line-height: 22px;
+    color: #959cb2;
+  }
+  &__btn {
+    width: 100%;
+    @extend %btn-second;
+    margin-top: 20px;
+  }
+  &__content {
+    .basket__cart {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      //background: rgba(#000, 0.2);
+      & + .basket__cart {
+        margin-top: 41px;
+      }
+    }
+    .basket__forms {
+      margin-right: 0px;
+    }
+  }
+  &__wrap {
+    margin-left: 20px;
+  }
+  &__img {
+    width: 220px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  &__head {
+    display: flex;
+  }
+  &__head-title,
+  &__head-code {
+    @extend %MuseoSansCyrl-500;
+  }
+  &__head-title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #001a34;
+  }
+  &__head-code {
+    font-size: 16px;
+    line-height: 19px;
+    color: #959cb2;
+    margin-left: 20px;
+  }
+  &__description {
+    margin: 10px 0 42px;
+    display: flex;
+    align-items: center;
+    @extend %MuseoSansCyrl-300;
+  }
+  &__description-title {
+    @extend %MuseoSansCyrl-700;
+    margin-right: 10px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__footer-add {
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    padding: 16px 34px;
+    background: #f2f5f9;
+    border-radius: 5px;
+  }
+  .jq-number {
+    position: relative;
+    vertical-align: middle;
+    padding: 0 36px 0 0;
+
+    width: 170px;
+    height: 50px;
+    background: #f2f5f9;
+    border-radius: 5px;
+  }
+  .jq-number__field {
+    width: 170px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 100%;
+  }
+  .jq-number__spin.minus,
+  .jq-number__spin.plus {
+    top: 50%;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+  .jq-number__spin.minus {
+    background-image: url("../img/icons/minus.svg");
+    left: 0;
+  }
+  .jq-number__spin.plus {
+    background-image: url("../img/icons/plus.svg");
+    right: 0;
+  }
+  .jq-number__spin:after {
+    display: none;
+  }
+  .jq-number__field input {
+    width: 100%;
+    padding: 0;
+    background: transparent;
     @extend %MuseoSansCyrl-700;
     font-size: 18px;
     line-height: 100%;
     letter-spacing: -0.05em;
-    color: #fff;
+    color: #31465a;
+    height: 100%;
+    text-align: center;
   }
-}
-.basket{
-  &__inner{
-    padding: 11px 0 237px;
+  .jq-number__spin {
+    box-shadow: none;
+    user-select: none;
+    text-shadow: none;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #f2f5f9, #f2f5f9), #d5d9e5;
+    border-radius: 5px;
   }
-  &__title{
-    margin-bottom: 30px;
+  &__footer-price {
+    display: flex;
+    align-items: center;
+    @extend %MuseoSansCyrl-500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #cf000f;
+    svg {
+      margin-left: 10px;
+    }
   }
 }
 .footer {

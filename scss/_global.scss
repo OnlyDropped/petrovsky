@@ -33,6 +33,17 @@ a {
   margin: 0 auto;
 }
 
+input,
+textarea {
+  @extend %MuseoSansCyrl-500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #31465a;
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
 input::placeholder,
 textarea::placeholder {
   @extend %MuseoSansCyrl-300;
@@ -43,7 +54,7 @@ textarea::placeholder {
   outline: none;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
@@ -107,4 +118,15 @@ textarea{
   line-height: 22px;
   color: #31465a;
   margin-bottom: 20px;
+}
+
+%btn-second {
+  background: #cf000f;
+  border-radius: 5px;
+  @extend %MuseoSansCyrl-700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: #fff;
+  padding: 16px 0;
 }

@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.theme.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -65,7 +67,148 @@
       <div class="container">
         <div class="basket__inner">
           <h2 class="catalog-title basket__title">Корзина</h2>
-          
+
+          <div class="basket__wrapper">
+            <div class="basket__content">
+              <div class="basket__top">
+                <form class="basket__forms" action="#">
+                  <label class="custom-checkbox">
+                    <input class="hidden-checkbox" type="checkbox">
+                      <div class="checkbox">
+                        <svg class="checkmark" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.85742 5.99979L6.35742 9.21408L12.1431 0.856934" stroke="white" stroke-width="3"/>
+                        </svg>
+                      </div>
+                      Выбрать всё
+                  </label>
+                </form>
+                <a class="basket__delete" href="#">Удалить</a>
+              </div>
+              <div class="basket__cart">
+                <form class="basket__forms" action="#">
+                  <label class="custom-checkbox">
+                    <input class="hidden-checkbox" type="checkbox">
+                      <div class="checkbox">
+                        <svg class="checkmark" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.85742 5.99979L6.35742 9.21408L12.1431 0.856934" stroke="white" stroke-width="3"/>
+                        </svg>
+                      </div>
+                  </label>
+                </form>
+                <img class="basket__img" src="img/catalog/card-one/1.png" alt="cart images">
+                <div class="basket__wrap">
+                  <div class="basket__head">
+                    <div class="basket__head-title">Композиции OSAGO</div>
+                    <div class="basket__head-code">Код товара: 7654321</div>
+                  </div>
+                  <div class="basket__description">
+                    <div class="basket__description-title">Исполнение:</div>
+                      Корпус - Оливия Кэйсон, Фасад - Стекло / Принт Indytea, Ножки бук
+                  </div>
+                  <div class="basket__footer">
+                    <button class="basket__footer-add">Добавить опции</button>
+                    <form class="basket__footer-form" action="#">
+                      <input class="basket__number" type="number" value="1" step="1" min="1">
+                    </form>
+                    <div class="basket__footer-price">4 333 555
+                      <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 17H5V14H11V12H5V10H9.5C12.257 10 14.5 7.757 14.5 5C14.5 2.243 12.257 0 9.5 0H4C3.73478 0 3.48043 0.105357 3.29289 0.292893C3.10536 0.48043 3 0.734784 3 1V8H0V10H3V12H0V14H3V17ZM5 2H9.5C11.154 2 12.5 3.346 12.5 5C12.5 6.654 11.154 8 9.5 8H5V2Z" fill="#001A34"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket__cart">
+                <form class="basket__forms" action="#">
+                  <label class="custom-checkbox">
+                    <input class="hidden-checkbox" type="checkbox">
+                      <div class="checkbox">
+                        <svg class="checkmark" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.85742 5.99979L6.35742 9.21408L12.1431 0.856934" stroke="white" stroke-width="3"/>
+                        </svg>
+                      </div>
+                  </label>
+                </form>
+                <img class="basket__img" src="img/catalog/card-one/1.png" alt="cart images">
+                <div class="basket__wrap">
+                  <div class="basket__head">
+                    <div class="basket__head-title">Композиции OSAGO</div>
+                    <div class="basket__head-code">Код товара: 7654321</div>
+                  </div>
+                  <div class="basket__description">
+                    <div class="basket__description-title">Исполнение:</div>
+                      Корпус - Оливия Кэйсон, Фасад - Стекло / Принт Indytea, Ножки бук
+                  </div>
+                  <div class="basket__footer">
+                    <button class="basket__footer-add">Добавить опции</button>
+                    <form class="basket__footer-form" action="#">
+                      <input class="basket__number" type="number" value="1" step="1" min="1">
+                    </form>
+                    <div class="basket__footer-price">4 333 555
+                      <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 17H5V14H11V12H5V10H9.5C12.257 10 14.5 7.757 14.5 5C14.5 2.243 12.257 0 9.5 0H4C3.73478 0 3.48043 0.105357 3.29289 0.292893C3.10536 0.48043 3 0.734784 3 1V8H0V10H3V12H0V14H3V17ZM5 2H9.5C11.154 2 12.5 3.346 12.5 5C12.5 6.654 11.154 8 9.5 8H5V2Z" fill="#001A34"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__info">
+              <form class="basket__form">
+                <label class="basket__label" for="#">
+                  <input class="basket__input" type="text" placeholder="Промокод">
+                  <button class="basket__plus">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 11.875V20H11.875V11.875H20V8.125H11.875V0H8.125V8.125H0V11.875H8.125Z" fill="white"/>
+                    </svg>
+                  </button>
+                </label>
+              </form>
+              <div class="basket__promo">
+                Промо1
+                <a class="basket__cancel" href="#">Отменить</a>
+              </div>
+              <div class="basket__item">
+                <div class="basket__cart">
+                  Ваша корзина
+                </div>
+                <ul class="basket__list">
+                  <li class="basket__items">
+                    Товар (1)
+                    <div class="basket__total">
+                    4 300 655
+                    <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 14.1667H4.16667V11.6667H9.16667V10H4.16667V8.33333H7.91667C10.2142 8.33333 12.0833 6.46417 12.0833 4.16667C12.0833 1.86917 10.2142 0 7.91667 0H3.33333C3.11232 0 2.90036 0.0877975 2.74408 0.244078C2.5878 0.400358 2.5 0.61232 2.5 0.833333V6.66667H0V8.33333H2.5V10H0V11.6667H2.5V14.1667ZM4.16667 1.66667H7.91667C9.295 1.66667 10.4167 2.78833 10.4167 4.16667C10.4167 5.545 9.295 6.66667 7.91667 6.66667H4.16667V1.66667Z" fill="#31465A"/>
+                    </svg>
+                  </div>
+                  </li>
+                  <li class="basket__items">
+                    Товар (1)
+                    <div class="basket__total">
+                    4 300 655
+                    <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 14.1667H4.16667V11.6667H9.16667V10H4.16667V8.33333H7.91667C10.2142 8.33333 12.0833 6.46417 12.0833 4.16667C12.0833 1.86917 10.2142 0 7.91667 0H3.33333C3.11232 0 2.90036 0.0877975 2.74408 0.244078C2.5878 0.400358 2.5 0.61232 2.5 0.833333V6.66667H0V8.33333H2.5V10H0V11.6667H2.5V14.1667ZM4.16667 1.66667H7.91667C9.295 1.66667 10.4167 2.78833 10.4167 4.16667C10.4167 5.545 9.295 6.66667 7.91667 6.66667H4.16667V1.66667Z" fill="#31465A"/>
+                    </svg>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="basket__item">
+                <div class="basket__price">
+                  Общая <br> стоимость 
+                  <div class="basket__total">
+                    4 300 655
+                    <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 14.1667H4.16667V11.6667H9.16667V10H4.16667V8.33333H7.91667C10.2142 8.33333 12.0833 6.46417 12.0833 4.16667C12.0833 1.86917 10.2142 0 7.91667 0H3.33333C3.11232 0 2.90036 0.0877975 2.74408 0.244078C2.5878 0.400358 2.5 0.61232 2.5 0.833333V6.66667H0V8.33333H2.5V10H0V11.6667H2.5V14.1667ZM4.16667 1.66667H7.91667C9.295 1.66667 10.4167 2.78833 10.4167 4.16667C10.4167 5.545 9.295 6.66667 7.91667 6.66667H4.16667V1.66667Z" fill="#31465A"/>
+                    </svg>
+                  </div>
+                </div>
+                <span class="basket__span">Без учета стоимости доставки</span>
+              </div>
+              <button class="basket__btn">Перейти к оформлению</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -209,7 +352,10 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    
+  </script>
 </body>
 </html>
