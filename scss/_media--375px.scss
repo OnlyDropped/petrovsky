@@ -1,0 +1,25 @@
+@media (max-width: 375px) {
+  .header {
+    &__inner {
+      padding: 20px 0 30px;
+    }
+    &__text {
+      padding: 8px 14px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &__menu {
+      margin-right: 19px;
+      width: 34px;
+      height: 34px;
+    }
+    &__tel {
+      display: none;
+    }
+    &__logo {
+      img {
+        width: 125px;
+      }
+    }
+  }
+}

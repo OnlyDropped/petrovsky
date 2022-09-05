@@ -1,4 +1,6 @@
-$('.basket__number').styler({})
+$('.header__menu').on('click', function () {
+  $('.header__list').toggleClass('header__list--active');
+})
 
 $('.carousel-slider').slick({
   arrows: false,
@@ -21,7 +23,7 @@ $('.buy-together__wrapper').slick({
   infinite: false,
   prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/prev-arrow.svg" alt=""></button>',
   nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>'
-})
+  })
 
 $('.card-product__slider').slick({
   arrows: true,
@@ -63,4 +65,3 @@ $('.filter-sidebar__input').ionRangeSlider({
   },
 })
 
-$('.basket__number').styler({})

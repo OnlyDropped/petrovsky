@@ -1382,6 +1382,7 @@
     @extend %MuseoSansCyrl-500;
     line-height: 18px;
     color: #cf000f;
+    margin-left: 30px;
   }
   &__info {
     max-width: 300px;
@@ -1682,4 +1683,5 @@
     color: #ff5f5f;
   }
 }
-@import "media";
+@import "media--768px";
+@import "media--375px";

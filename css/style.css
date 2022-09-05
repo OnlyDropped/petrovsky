@@ -2062,6 +2062,7 @@ textarea {
 .basket__delete {
   line-height: 18px;
   color: #cf000f;
+  margin-left: 30px;
 }
 
 .basket__info {
@@ -2451,5 +2452,106 @@ textarea {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #ff5f5f;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .header__inner {
+    padding: 41px 0 49px;
+  }
+  .header__list {
+    display: none;
+    position: absolute;
+    display: block;
+    inset: 0;
+    background: yellowgreen;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  .header__list--active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  .header__item + .header__item {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .header__link {
+    font-size: 26px;
+  }
+  .header__tel {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    background: #f2f5f9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .header__tel img {
+    display: block;
+  }
+  .header__span {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+    margin-right: 45px;
+    z-index: 1;
+  }
+  .header__logo img {
+    width: 159px;
+  }
+  .header__form {
+    display: none;
+  }
+  .header__content {
+    margin-left: 0;
+  }
+  .header__logo {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__inner {
+    padding: 20px 0 30px;
+  }
+  .header__text {
+    padding: 8px 14px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .header__menu {
+    margin-right: 19px;
+    width: 34px;
+    height: 34px;
+  }
+  .header__tel {
+    display: none;
+  }
+  .header__logo img {
+    width: 125px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
