@@ -2482,6 +2482,8 @@ textarea {
             transform: translateY(-150%);
     -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    z-index: 10;
+    background: radial-gradient(rgba(0, 0, 0, 0.75), black);
   }
   .header__list--active {
     -webkit-transform: translateY(0%);
@@ -2514,7 +2516,7 @@ textarea {
   .header__menu {
     display: block;
     margin-right: 45px;
-    z-index: 1;
+    z-index: 11;
   }
   .header__logo img {
     width: 159px;
@@ -2527,6 +2529,89 @@ textarea {
   }
   .header__logo {
     margin: 0 auto;
+  }
+  .carousel .container {
+    max-width: 768px;
+    padding: 0px;
+  }
+  .carousel__inner {
+    padding-bottom: 48px;
+  }
+  .carousel-slider__card, .carousel-slider__item {
+    max-width: 768px;
+  }
+  .carousel-slider__content {
+    max-width: calc(100vw - 326px);
+  }
+  .carousel-slider__info {
+    max-width: 326px;
+  }
+  .carousel-slider__new {
+    margin-bottom: 39px;
+  }
+  .carousel-slider__subtitle {
+    font-size: 30px;
+  }
+  .carousel-slider__title {
+    font-size: 46px;
+    margin: 10px auto 30px;
+  }
+  .carousel-slider__description {
+    font-size: 16px;
+  }
+  .carousel-slider__wrap {
+    margin: auto;
+  }
+  .carousel-slider .slick-dots {
+    bottom: -30px;
+  }
+  .catalog__inner {
+    padding: 35px 0;
+  }
+  .catalog__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  .furniture .container {
+    padding: 0;
+  }
+  .furniture__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .furniture__text {
+    margin: 10px auto 30px;
+  }
+  .furniture__video {
+    min-height: 400px;
+  }
+  .cooperate__inner {
+    padding: 30px 0 90px;
+  }
+  .cooperate__item + .cooperate__item {
+    margin-left: 0;
+  }
+  .cooperate__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 50px;
+  }
+  .event__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    row-gap: 20px;
+  }
+  .event__item + .event__item {
+    margin-left: 0;
   }
   .footer-top {
     -ms-flex-wrap: wrap;
@@ -2579,7 +2664,7 @@ textarea {
     line-height: 18px;
   }
   .header__menu {
-    margin-right: 19px;
+    margin-right: 10px;
     width: 34px;
     height: 34px;
   }
@@ -2589,10 +2674,100 @@ textarea {
   .header__logo img {
     width: 125px;
   }
+  .carousel-slider__card, .carousel-slider__item {
+    max-width: 375px;
+    min-height: 310px;
+  }
+  .carousel-slider__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carousel-slider__content, .carousel-slider__info {
+    max-width: 100%;
+    width: 100%;
+  }
+  .carousel-slider__content {
+    padding: 0 25px;
+    background-size: cover;
+    background-position-x: center;
+  }
+  .carousel-slider .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+  .catalog__link {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .catalog__item + .catalog__item {
+    margin-left: 12px;
+  }
+  .catalog__wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    row-gap: 0;
+  }
+  .catalog__wrapper .slick-slide[aria-hidden="true"] {
+    opacity: 0.5;
+    margin: 0 auto;
+  }
+  .furniture__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .furniture__title {
+    font-size: 28px;
+  }
+  .furniture__text {
+    margin: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .furniture__video {
+    min-height: 300px;
+    margin: 20px 0 30px;
+  }
+  .furniture__play {
+    width: 100px;
+    height: 100px;
+  }
+  .cooperate__item {
+    min-height: 385px;
+    -webkit-box-shadow: 0px 64px 44px -50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 64px 44px -50px rgba(0, 0, 0, 0.15);
+  }
+  .cooperate__btn {
+    padding: 15px 0px;
+    width: 100%;
+  }
+  .event__title {
+    margin-bottom: 30px;
+  }
+  .event__wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+  .event__btn {
+    margin-top: 65px;
+  }
   .footer-top {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    row-gap: 20px;
+    row-gap: 0px;
+    padding: 39px 0 0 0;
   }
   .footer-top__info {
     -webkit-box-ordinal-group: 1;
@@ -2609,10 +2784,44 @@ textarea {
   .footer-top__items:nth-child(2), .footer-top__items:nth-child(4) {
     margin-left: 0;
   }
+  .footer-top__item + .footer-top__item {
+    margin-top: 15px;
+  }
   .footer-top__items {
-    width: 50%;
+    max-width: 160px;
+    width: 100%;
+  }
+  .footer-top__items-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer-top__items:nth-child(3) {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .footer-top__items:first-child {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .footer-top__items:nth-child(4) {
+    padding-top: 0;
+  }
+  .footer-top__info {
+    margin-top: 58px;
+  }
+  .footer-top__info .footer-top__link,
+  .footer-top__info .footer-top__mail {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .footer-top__time {
+    font-size: 24px;
+    line-height: 29px;
   }
   .footer-bottom {
+    padding: 30px 0 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -2627,6 +2836,7 @@ textarea {
   }
   .footer-bottom__text {
     text-align: center;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

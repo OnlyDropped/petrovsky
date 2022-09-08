@@ -16,6 +16,8 @@
       justify-content: center;
       transform: translateY(-150%);
       transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      z-index: 10;
+      background: radial-gradient(rgba(#000, .75), rgba(#000, 50%));
     }
     &__list--active {
       transform: translateY(0%);
@@ -45,7 +47,7 @@
     &__menu {
       display: block;
       margin-right: 45px;
-      z-index: 1;
+      z-index: 11;
     }
     &__logo {
       img {
@@ -60,6 +62,93 @@
     }
     &__logo {
       margin: 0 auto;
+    }
+  }
+  .carousel {
+    .container {
+      max-width: 768px;
+      padding: 0px;
+    }
+    &__inner {
+      padding-bottom: 48px;
+    }
+  }
+  .carousel-slider {
+    &__card,
+    &__item {
+      max-width: 768px;
+    }
+    &__content {
+      max-width: calc(100vw - 326px);
+    }
+    &__info {
+      max-width: 326px;
+    }
+    &__new {
+      margin-bottom: 39px;
+    }
+    &__subtitle {
+      font-size: 30px;
+    }
+    &__title {
+      font-size: 46px;
+      margin: 10px auto 30px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+    &__wrap {
+      margin: auto;
+    }
+    .slick-dots {
+      bottom: -30px;
+    }
+  }
+  .catalog {
+    &__inner {
+      padding: 35px 0;
+    }
+    &__wrapper {
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+  }
+  .furniture {
+    .container {
+      padding: 0;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &__text {
+      margin: 10px auto 30px;
+    }
+    &__video {
+      min-height: 400px;
+    }
+  }
+  .cooperate {
+    &__inner {
+      padding: 30px 0 90px;
+    }
+    &__item + .cooperate__item {
+      margin-left: 0;
+    }
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 50px;
+    }
+  }
+  .event {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 20px;
+    }
+    &__item + .event__item {
+      margin-left: 0;
     }
   }
   .footer-top {

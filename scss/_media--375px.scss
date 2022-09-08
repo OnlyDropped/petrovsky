@@ -9,7 +9,7 @@
       line-height: 18px;
     }
     &__menu {
-      margin-right: 19px;
+      margin-right: 10px;
       width: 34px;
       height: 34px;
     }
@@ -22,9 +22,95 @@
       }
     }
   }
+  .carousel-slider {
+    &__card,
+    &__item {
+      max-width: 375px;
+      min-height: 310px;
+    }
+    &__item {
+      flex-direction: column;
+    }
+    &__content,
+    &__info {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__content {
+      padding: 0 25px;
+      background-size: cover;
+      background-position-x: center;
+    }
+    .slick-dots li button {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .catalog {
+    &__link {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__item + .catalog__item {
+      margin-left: 12px;
+    }
+    &__wrapper {
+      flex-wrap: nowrap;
+      row-gap: 0;
+      .slick-slide[aria-hidden="true"] {
+        opacity: 0.5;
+        margin: 0 auto;
+      }
+    }
+  }
+  .furniture {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__text {
+      margin: 0;
+      order: 1;
+    }
+    &__video {
+      min-height: 300px;
+      margin: 20px 0 30px;
+    }
+    &__play {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .cooperate {
+    &__item {
+      min-height: 385px;
+      box-shadow: 0px 64px 44px -50px rgba(0, 0, 0, 0.15);
+    }
+    &__btn {
+      padding: 15px 0px;
+      width: 100%;
+    }
+  }
+  .event {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__wrapper {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &__btn {
+      margin-top: 65px;
+    }
+  }
   .footer-top {
     flex-wrap: wrap;
-    row-gap: 20px;
+    row-gap: 0px;
+    padding: 39px 0 0 0;
     &__info {
       order: 0;
       margin: 0 auto;
@@ -37,11 +123,42 @@
     &__items:nth-child(4) {
       margin-left: 0;
     }
+    &__item + .footer-top__item {
+      margin-top: 15px;
+    }
     &__items {
-      width: 50%;
+      max-width: 160px;
+      width: 100%;
+    }
+    &__items-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__items:nth-child(3) {
+      order: -2;
+    }
+    &__items:first-child {
+      order: -2;
+    }
+    &__items:nth-child(4) {
+      padding-top: 0;
+      //margin-top: -20px;
+    }
+    &__info {
+      margin-top: 58px;
+      .footer-top__link,
+      .footer-top__mail {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &__time {
+      font-size: 24px;
+      line-height: 29px;
     }
   }
   .footer-bottom {
+    padding: 30px 0 40px;
     flex-direction: column-reverse;
     &__content {
       margin-top: 0;
@@ -51,6 +168,7 @@
     }
     &__text {
       text-align: center;
+      margin-bottom: 30px;
     }
   }
 }
