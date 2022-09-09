@@ -707,6 +707,12 @@
   max-width: 325px;
   width: 100%;
   //background: rgba(#000, 0.2);
+  .catalog-title{
+    display: none;
+  }
+  &__close{
+    display: none;
+  }
   &__item {
     padding-left: 19px;
     max-width: 100%;

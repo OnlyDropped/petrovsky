@@ -17,7 +17,7 @@
       transform: translateY(-150%);
       transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       z-index: 10;
-      background: radial-gradient(rgba(#000, .75), rgba(#000, 50%));
+      //background: radial-gradient(rgba(#000, .75), rgba(#000, 50%));
     }
     &__list--active {
       transform: translateY(0%);
@@ -63,6 +63,105 @@
     &__logo {
       margin: 0 auto;
     }
+  }
+  .breadcrumbs {
+    &__inner {
+      padding-left: 0;
+    }
+  }
+  .catalog-product {
+    .container {
+      padding: 0;
+    }
+    &__title {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 30px;
+      padding-left: 15px;
+    }
+    &__wrapper {
+      max-width: 100%;
+      flex-wrap: nowrap;
+      gap: 0 60px;
+      padding: 0 15px;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+    &__item {
+      min-height: 125px;
+      white-space: nowrap;
+      //background: darkkhaki;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 18px;
+      width: 150px;
+      white-space: pre-line;
+    }
+  }
+  .filter {
+    &__title {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 42px;
+    }
+    &__content {
+      row-gap: 20px;
+      padding-bottom: 45px;
+    }
+    &__info {
+      .catalog-card {
+        max-width: 230px;
+        min-height: 297px;
+      }
+      .catalog-card__slider {
+        max-width: 230px;
+      }
+      .catalog-card__head {
+        max-width: 230px;
+      }
+      .catalog-card__img {
+        width: 230px;
+      }
+    }
+    &__view {
+      margin: 30px auto 0;
+    }
+  }
+  .filter-sidebar {
+    max-width: 228px;
+    &__item {
+      padding-left: 0;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__price-from,
+    &__price-to {
+      width: 110px;
+      padding: 10px 8px;
+      align-items: center;
+    }
+    &__from-price,
+    &__to-price {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__custom-checkbox + .filter-sidebar__custom-checkbox {
+      margin-top: 9px;
+    }
+  }
+  .filter__info {
+    max-width: 480px;
+    margin-left: 20px;
+  }
+  .filter-pagination {
+    padding: 60px 0;
   }
   .carousel {
     .container {

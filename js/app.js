@@ -65,3 +65,10 @@ $('.filter-sidebar__input').ionRangeSlider({
   },
 })
 
+$('.catalog-product__open').on('click', function name(params) {
+  $('.filter-sidebar').addClass('filter-sidebar__show');
+})
+
+$('.filter-sidebar__close').on('click', function name(params) {
+  $('.filter-sidebar').removeClass('filter-sidebar__show');
+})

@@ -1246,6 +1246,14 @@ textarea {
   /* Rounded sliders */
 }
 
+.filter-sidebar .catalog-title {
+  display: none;
+}
+
+.filter-sidebar__close {
+  display: none;
+}
+
 .filter-sidebar__item {
   padding-left: 19px;
   max-width: 100%;
@@ -2483,7 +2491,6 @@ textarea {
     -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     z-index: 10;
-    background: radial-gradient(rgba(0, 0, 0, 0.75), black);
   }
   .header__list--active {
     -webkit-transform: translateY(0%);
@@ -2529,6 +2536,97 @@ textarea {
   }
   .header__logo {
     margin: 0 auto;
+  }
+  .breadcrumbs__inner {
+    padding-left: 0;
+  }
+  .catalog-product .container {
+    padding: 0;
+  }
+  .catalog-product__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+  }
+  .catalog-product__wrapper {
+    max-width: 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0 60px;
+    padding: 0 15px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .catalog-product__wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .catalog-product__item {
+    min-height: 125px;
+    white-space: nowrap;
+  }
+  .catalog-product__text {
+    font-size: 16px;
+    line-height: 18px;
+    width: 150px;
+    white-space: pre-line;
+  }
+  .filter__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 42px;
+  }
+  .filter__content {
+    row-gap: 20px;
+    padding-bottom: 45px;
+  }
+  .filter__info .catalog-card {
+    max-width: 230px;
+    min-height: 297px;
+  }
+  .filter__info .catalog-card__slider {
+    max-width: 230px;
+  }
+  .filter__info .catalog-card__head {
+    max-width: 230px;
+  }
+  .filter__info .catalog-card__img {
+    width: 230px;
+  }
+  .filter__view {
+    margin: 30px auto 0;
+  }
+  .filter-sidebar {
+    max-width: 228px;
+  }
+  .filter-sidebar__item {
+    padding-left: 0;
+  }
+  .filter-sidebar__title {
+    margin-bottom: 20px;
+  }
+  .filter-sidebar__price-from, .filter-sidebar__price-to {
+    width: 110px;
+    padding: 10px 8px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filter-sidebar__from-price, .filter-sidebar__to-price {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .filter-sidebar__custom-checkbox + .filter-sidebar__custom-checkbox {
+    margin-top: 9px;
+  }
+  .filter__info {
+    max-width: 480px;
+    margin-left: 20px;
+  }
+  .filter-pagination {
+    padding: 60px 0;
   }
   .carousel .container {
     max-width: 768px;
@@ -2673,6 +2771,162 @@ textarea {
   }
   .header__logo img {
     width: 125px;
+  }
+  .breadcrumbs__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+  .breadcrumbs__item + .breadcrumbs__item {
+    margin-left: 0;
+  }
+  .catalog-product__wrapper {
+    gap: 0 30px;
+  }
+  .catalog-product__item {
+    max-width: 130px;
+  }
+  .catalog-product__text {
+    width: 130px;
+  }
+  .catalog-product__open {
+    display: block;
+  }
+  .filter-sidebar {
+    display: none;
+  }
+  .filter-sidebar__price-from, .filter-sidebar__price-to {
+    border: 2px solid #5a5f6e;
+    width: 150px;
+  }
+  .filter-sidebar__btn {
+    margin: 0px auto 0;
+    background: #cf000f;
+    color: #fff;
+  }
+  .filter {
+    position: relative;
+  }
+  .filter .filter-sidebar {
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 20;
+    background: #f2f5f9;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 30px 20px 50px;
+    top: -75px;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .filter .filter-sidebar__show {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .filter .filter-sidebar__close {
+    display: block;
+    margin-left: auto;
+  }
+  .filter .filter-sidebar .catalog-title {
+    padding: 0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 27px;
+    display: block;
+  }
+  .filter .container {
+    padding: 0;
+  }
+  .filter__content {
+    row-gap: 10px;
+    padding-bottom: 25px;
+  }
+  .filter__view {
+    margin: 25px auto 0;
+  }
+  .filter__inner {
+    padding: 25px 0 30px;
+  }
+  .filter__title {
+    padding: 0 15px;
+  }
+  .filter__info {
+    margin-left: 0;
+  }
+  .filter__info .catalog-card {
+    max-width: 174px;
+  }
+  .filter__info .catalog-card__items, .filter__info .catalog-card__item {
+    min-height: 230px;
+  }
+  .filter__info .catalog-card__slider {
+    max-width: 174px;
+    min-height: 230px;
+  }
+  .filter__info .catalog-card__slider .slick-dots {
+    bottom: -8px;
+    -webkit-column-gap: 6px;
+            column-gap: 6px;
+  }
+  .filter__info .catalog-card__slider .slick-dots li button {
+    width: 5px;
+    height: 5px;
+  }
+  .filter__info .catalog-card__head {
+    width: 174px;
+    height: 230px;
+  }
+  .filter__info .catalog-card__img {
+    width: 174px;
+    height: 230px;
+  }
+  .filter__info .catalog-card__body {
+    max-width: 174px;
+    min-height: 106px;
+    padding: 15px;
+  }
+  .filter__info .catalog-card__code {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .filter__info .catalog-card__description {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  .filter__info .catalog-card__price {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .filter__info .catalog-card__info {
+    max-width: 85px;
+  }
+  .filter__info .catalog-card__cart {
+    width: 40px;
+    height: 40px;
+  }
+  .filter-pagination {
+    padding: 50px 0;
+  }
+  .filter-pagination__arrow {
+    display: none;
+  }
+  .filter-pagination__item {
+    width: 45px;
+    height: 45px;
   }
   .carousel-slider__card, .carousel-slider__item {
     max-width: 375px;
