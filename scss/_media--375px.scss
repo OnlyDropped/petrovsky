@@ -304,6 +304,92 @@
       height: 40px;
     }
   }
+  .basket {
+    &__img {
+      width: 100px;
+      height: 100px;
+    }
+    &__forms {
+      .custom-checkbox .checkbox {
+        margin-right: 10px;
+      }
+    }
+    &__wrap {
+      margin-left: 10px;
+    }
+    &__content {
+      .basket__cart + .basket__cart {
+        margin-top: 25px;
+      }
+    }
+    &__head {
+      flex-direction: column-reverse;
+      align-items: baseline;
+    }
+    &__footer-add {
+      display: none;
+    }
+    &__description {
+      margin: 10px 0 20px;
+      flex-direction: column;
+    }
+    &__head-code {
+      margin-left: 0;
+    }
+    .jq-number {
+      width: 90px;
+      height: 30px;
+    }
+    .jq-number__field {
+      width: 90px;
+    }
+    .jq-number__field input {
+      font-size: 16px;
+    }
+    .jq-number__spin {
+      width: 20px;
+      height: 20px;
+    }
+    .jq-number__spin.plus,
+    .jq-number__spin.minus {
+      background-size: 75%;
+    }
+    .jq-number__spin.minus {
+      left: 5px;
+    }
+    .jq-number__spin.plus {
+      right: 5px;
+    }
+    &__head-title {
+      font-size: 19px;
+      line-height: 26px;
+    }
+    &__footer {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  .order {
+    &__inner {
+      margin-bottom: 100px;
+    }
+    &__wrapper {
+      padding: 50px 0;
+    }
+    .catalog-title {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 43px;
+    }
+    .custom-checkbox {
+      font-size: 14px;
+      line-height: 22px;
+      align-items: flex-start;
+    }
+    .custom-checkbox .checkbox {
+      margin-right: 10px;
+    }
+  }
   .footer-top {
     flex-wrap: wrap;
     row-gap: 0px;
