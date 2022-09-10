@@ -250,6 +250,149 @@
       margin-left: 0;
     }
   }
+  .buy-together {
+    &__inner {
+      padding: 35px 0 100px;
+    }
+    &__title {
+      font-size: 25px;
+    }
+    &__wrapper {
+      margin-top: 30px;
+    }
+    &__card {
+      max-width: 230px;
+    }
+    &__item {
+      max-width: 230px;
+    }
+    .catalog-card {
+      min-height: 297px;
+      max-width: 230px;
+      //background: seagreen;
+      &__slider {
+        max-width: 230px;
+        min-height: 191px;
+      }
+      &__items,
+      &__item {
+        min-height: 191px;
+      }
+      &__head {
+        max-width: 230px;
+        height: 191px;
+      }
+      &__img {
+        width: 230px;
+        height: 191px;
+      }
+      &__body {
+        max-width: 230px;
+        min-height: 106px;
+        padding: 15px 15px 15px;
+        //background: darkcyan;
+      }
+      &__code {
+        font-size: 10px;
+        line-height: 12px;
+      }
+      &__description {
+        font-size: 12px;
+        line-height: 14px;
+      }
+      &__price {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+    .slick-next.slick-arrow {
+      right: -10px;
+    }
+    .slick-prev.slick-arrow.slick-arrow {
+      left: -10px;
+    }
+  }
+  .card-product {
+    &__title {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    &__content {
+      display: block;
+      max-width: 355px;
+    }
+    &__content-img {
+      width: 355px;
+      height: 200px;
+    }
+    &__wrap {
+      margin-top: 10px;
+      row-gap: 10px;
+    }
+    &__wrap-img {
+      width: 170px;
+      height: 170px;
+    }
+    &__info {
+      max-width: 355px;
+      margin-left: 19px;
+      padding-top: 40px;
+    }
+    &__head,
+    &__price {
+      padding-right: 0;
+    }
+    &__price {
+      font-size: 16px;
+      margin: 8px 0 40px;
+    }
+    &__price {
+      flex-wrap: wrap;
+    }
+    &__price-num {
+      margin: 0;
+      font-size: 24px;
+      order: 1;
+    }
+    &__add-cart {
+      margin-left: auto;
+      margin-bottom: -49px;
+    }
+    &__span {
+      font-size: 16px;
+    }
+    &__slider {
+      width: 225px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      //background: rgba($color: #000, $alpha: 0.2);
+      .slick-list {
+        height: 65px;
+      }
+      .slick-prev.slick-arrow {
+        left: -65px;
+      }
+      .slick-next.slick-arrow {
+        right: -65px;
+      }
+    }
+    &__item,
+    &__card,
+    &__images {
+      max-width: 65px;
+      min-height: 65px;
+    }
+    &__img {
+      width: 65px;
+      width: 65px;
+    }
+    &__text {
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+  }
   .footer-top {
     flex-wrap: wrap;
     &__info {

@@ -22,7 +22,24 @@ $('.buy-together__wrapper').slick({
   slidesToScroll: 1,
   infinite: false,
   prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/prev-arrow.svg" alt=""></button>',
-  nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>'
+  nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>',
+  responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          arrows: true,
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 376,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          slidesToShow: 1,
+        }
+      }
+    ]
   })
 
 $('.card-product__slider').slick({
@@ -34,7 +51,16 @@ $('.card-product__slider').slick({
   slidesToScroll: 1,
   infinite: true,
   prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/prev-arrow.svg" alt=""></button>',
-  nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>'
+  nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        arrows: true,
+        slidesToShow: 3,
+      }
+    },
+  ]
 })
 
 $('.catalog-card__slider').slick({

@@ -2711,6 +2711,141 @@ textarea {
   .event__item + .event__item {
     margin-left: 0;
   }
+  .buy-together__inner {
+    padding: 35px 0 100px;
+  }
+  .buy-together__title {
+    font-size: 25px;
+  }
+  .buy-together__wrapper {
+    margin-top: 30px;
+  }
+  .buy-together__card {
+    max-width: 230px;
+  }
+  .buy-together__item {
+    max-width: 230px;
+  }
+  .buy-together .catalog-card {
+    min-height: 297px;
+    max-width: 230px;
+  }
+  .buy-together .catalog-card__slider {
+    max-width: 230px;
+    min-height: 191px;
+  }
+  .buy-together .catalog-card__items, .buy-together .catalog-card__item {
+    min-height: 191px;
+  }
+  .buy-together .catalog-card__head {
+    max-width: 230px;
+    height: 191px;
+  }
+  .buy-together .catalog-card__img {
+    width: 230px;
+    height: 191px;
+  }
+  .buy-together .catalog-card__body {
+    max-width: 230px;
+    min-height: 106px;
+    padding: 15px 15px 15px;
+  }
+  .buy-together .catalog-card__code {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .buy-together .catalog-card__description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .buy-together .catalog-card__price {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .buy-together .slick-next.slick-arrow {
+    right: -10px;
+  }
+  .buy-together .slick-prev.slick-arrow.slick-arrow {
+    left: -10px;
+  }
+  .card-product__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .card-product__content {
+    display: block;
+    max-width: 355px;
+  }
+  .card-product__content-img {
+    width: 355px;
+    height: 200px;
+  }
+  .card-product__wrap {
+    margin-top: 10px;
+    row-gap: 10px;
+  }
+  .card-product__wrap-img {
+    width: 170px;
+    height: 170px;
+  }
+  .card-product__info {
+    max-width: 355px;
+    margin-left: 19px;
+    padding-top: 40px;
+  }
+  .card-product__head, .card-product__price {
+    padding-right: 0;
+  }
+  .card-product__price {
+    font-size: 16px;
+    margin: 8px 0 40px;
+  }
+  .card-product__price {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card-product__price-num {
+    margin: 0;
+    font-size: 24px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .card-product__add-cart {
+    margin-left: auto;
+    margin-bottom: -49px;
+  }
+  .card-product__span {
+    font-size: 16px;
+  }
+  .card-product__slider {
+    width: 225px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .card-product__slider .slick-list {
+    height: 65px;
+  }
+  .card-product__slider .slick-prev.slick-arrow {
+    left: -65px;
+  }
+  .card-product__slider .slick-next.slick-arrow {
+    right: -65px;
+  }
+  .card-product__item, .card-product__card, .card-product__images {
+    max-width: 65px;
+    min-height: 65px;
+  }
+  .card-product__img {
+    width: 65px;
+    width: 65px;
+  }
+  .card-product__text {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
   .footer-top {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3016,6 +3151,48 @@ textarea {
   }
   .event__btn {
     margin-top: 65px;
+  }
+  .card-product__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: relative;
+    row-gap: 20px;
+  }
+  .card-product__inner .catalog-title {
+    position: absolute;
+    top: 0;
+  }
+  .card-product__info {
+    padding-top: 35px;
+    margin-left: 0;
+  }
+  .card-product__add-cart {
+    padding: 15px 45px;
+  }
+  .card-product__slider .slick-prev.slick-arrow {
+    left: -52px;
+  }
+  .card-product__slider .slick-next.slick-arrow {
+    right: -51px;
+  }
+  .card-product__slider .slick-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+  }
+  .card-product__wrap-img {
+    width: 160px;
+    height: 160px;
+  }
+  .buy-together__wrapper.slick-initialized.slick-slider {
+    background: darkmagenta;
+    background: transparent;
+  }
+  .buy-together .catalog-card__cart {
+    width: 40px;
+    height: 40px;
   }
   .footer-top {
     -ms-flex-wrap: wrap;
